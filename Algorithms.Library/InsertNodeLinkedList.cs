@@ -5,9 +5,23 @@ namespace Algorithms.Library
     /// <summary>
     ///https://www.hackerrank.com/challenges/insert-a-node-at-a-specific-position-in-a-linked-list/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
     /// </summary>
-    public class InsertANodeInLinkedList
+    public class InsertNodeLinkedList
     {
-
+       public SingleLinkedListNode InsertNodeAtHead(SingleLinkedListNode llist, int data)
+        {
+            var item = new SingleLinkedListNode(data);
+            if (llist == null)
+            {
+                llist = item;
+            }
+            else
+            {
+                var tmp = llist;
+                llist = item;
+                llist.next = tmp;
+            }
+            return llist;
+        }
         public SingleLinkedListNode InsertNodeAtPosition(SingleLinkedListNode head, int data, int position)
         {
             var cursor = 0;
