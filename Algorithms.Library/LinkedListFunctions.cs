@@ -1,13 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Algorithms.Library
 {
     /// <summary>
     ///https://www.hackerrank.com/challenges/insert-a-node-at-a-specific-position-in-a-linked-list/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
     /// </summary>
-    public class InsertNodeLinkedList
+    public class LinkedListFunctions
     {
-       public SingleLinkedListNode InsertNodeAtHead(SingleLinkedListNode llist, int data)
+        public SingleLinkedListNode InsertNodeAtHead(SingleLinkedListNode llist, int data)
         {
             var item = new SingleLinkedListNode(data);
             if (llist == null)
@@ -39,6 +40,14 @@ namespace Algorithms.Library
             previous.next.next = current;
             return head;
         }
+        public void ReverseList(SingleLinkedListNode head, IList<int> result)
+        {
+            if (result == null) result = new List<int>();
+            if (head == null)
+                return;
 
+                ReverseList(head.next, result);
+            result.Add(head.data);
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace Algorithms.Tests
             llist.InsertNode(16);
             llist.InsertNode(13);
             llist.InsertNode(7);
-            var i = new Library.InsertNodeLinkedList();
+            var i = new Library.LinkedListFunctions();
             var head = i.InsertNodeAtPosition(llist.head, 1, 2);
             Assert.Equal(16, head.data);
             Assert.Equal(13, head.next.data);

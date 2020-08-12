@@ -13,7 +13,7 @@ namespace Algorithms.Tests
         [Fact]
         public void Test1()
         {
-            var inh = new Library.InsertNodeLinkedList();
+            var inh = new Library.LinkedListFunctions();
             var list = new SingleLinkedList();
 
             var ints = new List<int> { 383, 484, 392, 975, 321 };
